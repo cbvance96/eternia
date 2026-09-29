@@ -1,0 +1,1 @@
+(() => { window.goto = (id, t) => { let g = 0; while (!(director.phase === 'play' && director.active && director.active.def.id === id) && g++ < 20000) eternia.advance(1 / 60); eternia.advance(t); return director.active ? director.active.def.id + ' ' + director.active.t.toFixed(1) : director.phase; }; return 'ready'; })()
